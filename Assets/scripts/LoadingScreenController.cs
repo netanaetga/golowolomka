@@ -35,6 +35,8 @@ public class LoadingScreenController : MonoBehaviour
         yield return FadeLoadingScreen(1, 3, zatemnaylka);
         progressBar.gameObject.SetActive(true);
 
+        YG.YandexGame.FullscreenShow();
+
         async = SceneManager.LoadSceneAsync(levelName);
         async.allowSceneActivation = false;
 
